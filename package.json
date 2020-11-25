@@ -1,0 +1,24 @@
+{
+  "name": "browsersync-images-middleware",
+  "description": "browser-sync development middleware to transform local images (fake-CDN feature)",
+  "keywords": [
+    "browsersync",
+    "browser-sync",
+    "middleware",
+    "images",
+    "transformation",
+    "cdn"
+  ],
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Ben Michaud <ben@tigersway.net>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TigersWay/browsersync-images-middleware.git"
+  },
+  "homepage": "https://github.com/TigersWay/browsersync-images-middleware/#readme",
+  "dependencies": {
+    "ansi-colors": "^4.1.1",
+    "sharp": "^0.26.3"
+  }
+}

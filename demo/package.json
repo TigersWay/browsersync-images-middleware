@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "browsersync-images-middleware": "link:..",
+    "hbs-cli": "^1.4.0"
+  },
+  "scripts": {
+    "demo": "npx hbs src/index.hbs --helper ./src/helpers.js && npx browser-sync -c bs-config.js -w"
+  }
+}

@@ -1,0 +1,10 @@
+var cdn = () => {};
+
+cdn.register = (Handlebars) => {
+  Handlebars.registerHelper('cdn', (imagePath, options) => {
+    const o = options.hash;
+    return `/img/w=${o.width}${o.height ? ',h='+o.height : ''}${imagePath}`;
+  });
+};
+
+module.exports = cdn;

@@ -1,0 +1,22 @@
+# Windows & helpers, IDE & Personal preferences
+desktop.ini
+folder.ico
+.vscode
+.editorconfig
+.eslintrc.js
+
+# Dependency files & directories (p/npm)
+node_modules
+package-lock.json
+pnpm-lock.yaml
+
+# dotenv environment variables file(s)
+.env*
+
+# Logs
+logs
+*.log*
+
+# distribution & generated output
+dist
+public
