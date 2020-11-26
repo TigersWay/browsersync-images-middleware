@@ -1,0 +1,23 @@
+---
+title: "11ty-sample"
+layout: "base.njk"
+---
+  <section>
+    <h2 class="font-mono font-semibold">width=300 (keep ratio)</h2>
+    <div class="flex items-center space-x-2">
+      <img src="{{ '/images/blue-eyes.jpg' | cdn(300) }}" alt="blue-eyes">
+      <img src="{{ '/images/bharath-mohan-2CjOnwJCMJM-unsplash.jpg' | cdn(300) }}" alt="bharath-mohan">
+      <img src="{{ '/images/ragnar-vorel-uXETAUu_cmI-unsplash.jpg' | cdn(300) }}" alt="ragnar-vorel">
+      <img src="{{ '/images/lauren-kay-A3V4fXudLhU-unsplash.jpg' | cdn(300) }}" alt="lauren-kay">
+    </div>
+  </section>
+
+  <section>
+    <h2 class="font-mono font-semibold">width=200 & height=200 (smartcrop)</h2>
+    <div class="flex items-center space-x-2">
+      <img src="{{ '/images/blue-eyes.jpg' | cdn(200,200) }}" alt="blue-eyes">
+      <img src="{{ '/images/bharath-mohan-2CjOnwJCMJM-unsplash.jpg' | cdn(200,200) }}" alt="bharath-mohan">
+      <img src="{{ '/images/ragnar-vorel-uXETAUu_cmI-unsplash.jpg' | cdn(200,200) }}" alt="ragnar-vorel">
+      <img src="{{ '/images/lauren-kay-A3V4fXudLhU-unsplash.jpg' | cdn(200,200) }}" alt="lauren-kay">
+    </div>
+  </section>

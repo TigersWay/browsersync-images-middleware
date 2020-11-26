@@ -20,8 +20,16 @@ Wherever you use browser-sync, add the middleware option, like this:
     }],
     ...
 ```
+- `[img]` Your chosen route. Can be anything, as long as you set your filter the same way.
+- `[public]` The root path of your images, probably your published/destination folder.
 
-### ToDos
+**WIP**
 - [ ] Add option: smartcrop disable
-- [ ] Implement: DPR
 - [ ] Implement: WebP
+
+**v0.2.0**
+- [Eleventy](https://www.11ty.dev/) sample
+- Added option: DPR
+
+**v0.1.0**
+- Initial upload
