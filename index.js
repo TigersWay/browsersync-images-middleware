@@ -17,7 +17,7 @@ module.exports = (root) => {
   imageRoot = root;
 
   return (request, response, next) => {
-    let match = request.url.match(/^\/(?<rules>[^/]*)\/(?<image>.*?.(?<ext>jpg|jpeg|png))$/);
+    let match = decodeURI(request.url).match(/^\/(?<rules>[^/]*)\/(?<image>.*?.(?<ext>jpg|jpeg|png))$/);
     if (match) {
 
       // Collect rules

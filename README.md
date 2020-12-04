@@ -23,9 +23,19 @@ Wherever you use browser-sync, add the middleware option, like this:
 - `[img]` Your chosen route. Can be anything, as long as you set your filter the same way.
 - `[public]` The root path of your images, probably your published/destination folder.
 
+### Demos
+
+You can find demos [here](https://github.com/TigersWay/browsersync-images-middleware/tree/main/demo) or [there](https://github.com/TigersWay/browsersync-images-middleware/tree/main/11ty-sample).
+
+### CHANGELOG
+
 **WIP**
 - [ ] Add option: smartcrop disable
 - [ ] Implement: WebP
+
+**v0.4.0**
+- Correction: URL is now "URI decoded"
+- Added png images
 
 **v0.2.0**
 - [Eleventy](https://www.11ty.dev/) sample
