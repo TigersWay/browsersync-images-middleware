@@ -2,9 +2,14 @@
   "dependencies": {
     "browser-sync": "^2.26.13",
     "browsersync-images-middleware": "link:..",
-    "hbs-cli": "^1.4.0"
+    "hbs-cli": "^1.4.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0"
   },
   "scripts": {
-    "demo": "npx hbs src/index.hbs --helper ./src/helpers.js && npx browser-sync -c bs-config.js -w"
+    "demo": "npm run build && run-p serve watch",
+    "build": "npx hbs src/index.hbs --helper ./src/helpers.js",
+    "watch": "onchange 'src' -- npm run build",
+    "serve": "npx browser-sync -c bs-config.js --files 'index.html'"
   }
 }

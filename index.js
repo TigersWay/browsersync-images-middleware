@@ -48,11 +48,11 @@ module.exports = (root) => {
       let transformer = sharp()
         .resize(options)
         .on('info', info => {
+          console.log(info);
+          response.setHeader('Content-Type', `image/${info.format}`);
           // response.setHeader('Accept-Ranges', 'bytes');
           response.setHeader('Content-Length', info.size);
         });
-
-      response.setHeader('Content-Type', 'image/jpeg');
 
       fs.createReadStream(`${imageRoot}/${match.groups.image}`)
         .on('error', (e) => {
