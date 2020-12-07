@@ -46,7 +46,7 @@ eleventyConfig.addFilter('cdn', (imagePath, width, height) => `/img/w=${width}${
 - [ ] Implement: WebP ?
 - [ ] Samples with known CDN with image transformation ?
 
-**v0.4.2**
+**v0.4.x**
 - Correction: URL is now "URI decoded"
 - Added png images
 
