@@ -7,33 +7,41 @@
 
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="h-screen container mx-auto my-8 space-y-8 leading-normal tracking-normal">
+<body class="my-8 space-y-8 leading-normal tracking-normal">
 
-
-  <section>
-    <h2 class="font-mono font-semibold">width=300 (keep ratio)</h2>
-    <div class="flex items-center space-x-2">
-      <img src="{{{ cdn '/images/blue-eyes.jpg' width=300 }}}" alt="blue-eyes">
-      <img src="{{{ cdn '/images/bharath-mohan-2CjOnwJCMJM-unsplash.jpg' width=300 }}}" alt="bharath-mohan">
-      <img src="{{{ cdn '/images/ragnar-vorel-uXETAUu_cmI-unsplash.jpg' width=300 }}}" alt="ragnar-vorel">
-      <img src="{{{ cdn '/images/lauren-kay-A3V4fXudLhU-unsplash.jpg' width=300 }}}" alt="lauren-kay">
+  <section class="container mx-auto">
+    <h2 class="font-mono font-semibold mx-1">Keep-ratio: width=300 (or height)</h2>
+    <div class="flex flex-wrap items-center">
+      <img class="m-1" src="{{{ cdn '/images/blue-eyes.jpg' width=300 }}}" alt="blue-eyes">
+      <img class="m-1" src="{{{ cdn '/images/bharath-mohan-2CjOnwJCMJM-unsplash.jpg' width=300 }}}" alt="bharath-mohan">
+      <img class="m-1" src="{{{ cdn '/images/ragnar-vorel-uXETAUu_cmI-unsplash.jpg' width=300 }}}" alt="ragnar-vorel">
+      <img class="m-1" src="{{{ cdn '/images/lauren-kay-A3V4fXudLhU-unsplash.jpg' width=300 }}}" alt="lauren-kay">
     </div>
   </section>
 
-  <section>
-    <h2 class="font-mono font-semibold">width=200 & height=200 (smartcrop)</h2>
-    <div class="flex items-center space-x-2">
-      <img src="{{{ cdn '/images/blue-eyes.jpg' width=200 height=200 }}}" alt="blue-eyes">
-      <img src="{{{ cdn '/images/bharath-mohan-2CjOnwJCMJM-unsplash.jpg' width=200 height=200 }}}" alt="bharath-mohan">
-      <img src="{{{ cdn '/images/ragnar-vorel-uXETAUu_cmI-unsplash.jpg' width=200 height=200 }}}" alt="ragnar-vorel">
-      <img src="{{{ cdn '/images/lauren-kay-A3V4fXudLhU-unsplash.jpg' width=200 height=200 }}}" alt="lauren-kay">
+  <section class="container mx-auto">
+    <h2 class="font-mono font-semibold mx-1">Smartcrop: width=200 & height=200</h2>
+    <div class="flex flex-wrap items-center">
+      <img class="m-1" src="{{{ cdn '/images/blue-eyes.jpg' width=200 height=200 }}}" alt="blue-eyes">
+      <img class="m-1" src="{{{ cdn '/images/bharath-mohan-2CjOnwJCMJM-unsplash.jpg' width=200 height=200 }}}" alt="bharath-mohan">
+      <img class="m-1" src="{{{ cdn '/images/ragnar-vorel-uXETAUu_cmI-unsplash.jpg' width=200 height=200 }}}" alt="ragnar-vorel">
+      <img class="m-1" src="{{{ cdn '/images/lauren-kay-A3V4fXudLhU-unsplash.jpg' width=200 height=200 }}}" alt="lauren-kay">
     </div>
   </section>
 
-  <section>
-    <h2 class="font-mono font-semibold">PNG & encoded</h2>
-    <div class="flex items-center space-x-2">
-      <img src="{{{ cdn '/images/sub/démonstration.png' width=200 height=200 }}}" alt="démonstration">
+  <section class="container mx-auto">
+    <h2 class="font-mono font-semibold mx-1">WebP & AVIF</h2>
+    <div class="flex flex-wrap items-center">
+      <img class="m-1" src="{{{ cdn '/images/lauren-kay-A3V4fXudLhU-unsplash.jpg' width=300 }}}" alt="lauren-kay">
+      <img class="m-1" src="{{{ cdn '/images/lauren-kay-A3V4fXudLhU-unsplash.jpg' width=300 force='webp' }}}" alt="lauren-kay">
+      <img class="m-1" src="{{{ cdn '/images/lauren-kay-A3V4fXudLhU-unsplash.jpg' width=300 force='avif' }}}" alt="lauren-kay">
+    </div>
+  </section>
+
+  <section class="container mx-auto">
+    <h2 class="font-mono font-semibold mx-1">PNG</h2>
+    <div class="flex flex-wrap items-center">
+      <img class="m-1" src="{{{ cdn '/images/sub/démonstration.png' width=200 height=200 }}}" alt="démonstration">
     </div>
   </section>
 

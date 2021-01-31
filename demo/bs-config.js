@@ -1,7 +1,8 @@
 module.exports = {
-  "middleware": [{
+  middleware: [{
     route: '/img',
     handle: require('browsersync-images-middleware')('.')
   }],
-  "browser": "chrome",
+  browser: "chrome",
+  // https: {key: "/key.pem", cert: "/cert.pem"}
 };

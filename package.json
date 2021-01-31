@@ -9,7 +9,7 @@
     "transformation",
     "cdn"
   ],
-  "version": "0.4.3",
+  "version": "1.0.0-alpha",
   "license": "MIT",
   "author": "Ben Michaud <ben@tigersway.net>",
   "repository": {
@@ -17,8 +17,12 @@
     "url": "git+https://github.com/TigersWay/browsersync-images-middleware.git"
   },
   "homepage": "https://github.com/TigersWay/browsersync-images-middleware/#readme",
-  "dependencies": {
-    "ansi-colors": "^4.1.1",
-    "sharp": "^0.26.3"
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "accepts": "^1.3.7",
+    "chalk": "^4.1.0",
+    "sharp": "^0.27.1"
   }
 }

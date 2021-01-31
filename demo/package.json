@@ -1,5 +1,5 @@
 {
-  "dependencies": {
+  "devDependencies": {
     "browser-sync": "^2.26.13",
     "browsersync-images-middleware": "link:..",
     "hbs-cli": "^1.4.0",
@@ -7,7 +7,7 @@
     "onchange": "^7.1.0"
   },
   "scripts": {
-    "demo": "npm run build && run-p serve watch",
+    "demo": "npm-run-all build --parallel watch serve",
     "build": "npx hbs src/index.hbs --helper ./src/helpers.js",
     "watch": "onchange 'src' -- npm run build",
     "serve": "npx browser-sync -c bs-config.js --files 'index.html'"
