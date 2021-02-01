@@ -1,15 +1,16 @@
 {
   "name": "browsersync-images-middleware",
-  "description": "browser-sync development middleware to transform local images (fake-CDN feature)",
+  "description": "browser-sync development middleware to resize and transform local images (fake-CDN features)",
   "keywords": [
     "browsersync",
     "browser-sync",
     "middleware",
     "images",
     "transformation",
+    "image-processing",
     "cdn"
   ],
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Ben Michaud <ben@tigersway.net>",
   "repository": {

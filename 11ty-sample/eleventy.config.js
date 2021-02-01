@@ -2,7 +2,13 @@ module.exports = (eleventyConfig) => {
 
   // This filter is set for the local fake-CDN,
   // each real CDN will need its own!
-  eleventyConfig.addFilter('cdn', (imagePath, width, height, force) => `/img/w=${width}${height ? ',h='+height : ''}${force ? ',f='+force : ''}${imagePath}`);
+  eleventyConfig.addFilter('cdn', (imagePath, width, height, force) => {
+    return `/img/`
+      + `w=${width}`
+      + `${height ? ',h='+height : ''}`
+      + `${force ? ',f='+force : ''}`
+      + `${imagePath}`;
+  });
 
   eleventyConfig.setBrowserSyncConfig({
     open: true,

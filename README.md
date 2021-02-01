@@ -1,15 +1,15 @@
 # browsersync-images-middleware  ![GitHub last commit](https://img.shields.io/github/last-commit/tigersway/browsersync-images-middleware?style=flat-square) ![GitHub issues](https://img.shields.io/github/issues/tigersway/browsersync-images-middleware?style=flat-square)
 
-browser-sync development middleware to transform local images (fake-CDN feature)
+browser-sync development middleware to resize and transform local images (fake-CDN features)
 
 
-### Install  [![npm](https://img.shields.io/npm/v/browsersync-images-middleware?style=flat-square)](https://www.npmjs.com/package/browsersync-images-middleware)
+## Install  [![npm](https://img.shields.io/npm/v/browsersync-images-middleware?style=flat-square)](https://www.npmjs.com/package/browsersync-images-middleware)
 
 ```
 npm i -D browsersync-images-middleware
 ```
 
-### Setup and features
+## Setup and features
 
 1. Wherever you use browser-sync, add the middleware option, like this:
     ```
@@ -24,41 +24,50 @@ npm i -D browsersync-images-middleware
     - `[public]` The root path of your images, probably your published/destination folder.
 
 2. and provide for your templates, a simple function, helper, filter, etc to mimic your favorite CDN's important features.
-    With these parameters/options
-    - width (default `undefined`)
-    - height (default `undefined`)
-    - dpr (default `1`)
-    - resize smart/fit (default `smart`)
-    - force webp/avif (default `undefined`)
-    to build these url:
-    `/img/w=200,f=webp/image/somewhere/cat.jpg`
-    `/img/w=300,h=300/image/anotherpath/dog.png`
-    `/img/w=400,h=200,s=fit,f=webp/image/tree/bird.jpg`
+  With these parameters/options:
+    - width                                 w=200
+    - height                                h=300
+    - dpr (default `1`)                     d=3
+    - resize smart/fit (default `smart`)    s=fit
+    - force webp/avif/auto                  f=auto
 
-### Demos
+    to build these (random) url:
+    - `/img/w=200,f=webp/image/somewhere/cat.jpg`
+    - `/img/w=300,h=300/image/anotherpath/dog.png`
+    - `/img/w=400,h=200,s=fit,f=auto/image/tree/bird.jpg`
 
-You can find a handlebars&trade; demo [here](https://github.com/TigersWay/browsersync-images-middleware/tree/main/demo) with its simpliest helper:
+## Demos
+
+You can clone/download the github repository where you will find some demos.
+
+A handlebars&trade; demo [here](https://github.com/TigersWay/browsersync-images-middleware/tree/main/demo) with its simpliest helper:
 ```js
-cdn.register = (Handlebars) => {
-  Handlebars.registerHelper('cdn', (imagePath, options) => {
-    const o = options.hash;
-    return `/img/w=${o.width}${o.height ? ',h='+o.height : ''}${imagePath}`;
-  });
-};
+Handlebars.registerHelper('cdn', (imagePath, options) => {
+  const o = options.hash;
+  return `/img/`
+    + `w=${o.width}`
+    + `${o.height ? ',h='+o.height : ''}`
+    + `${o.force ? ',f='+o.force : ''}`
+    + `${imagePath}`;
+});
 ```
-or a Eleventy&trade; one [there](https://github.com/TigersWay/browsersync-images-middleware/tree/main/11ty-sample) with its filter:
+
+Or a Eleventy&trade; one [there](https://github.com/TigersWay/browsersync-images-middleware/tree/main/11ty-sample) with a basic filter:
 ```js
-eleventyConfig.addFilter('cdn', (imagePath, width, height) => `/img/w=${width}${height ? ',h='+height : ''}${imagePath}`);
+eleventyConfig.addFilter('cdn', (imagePath, width, height, force) => {
+  return `/img/`
+    + `w=${width}`
+    + `${height ? ',h='+height : ''}`
+    + `${force ? ',f='+force : ''}`
+    + `${imagePath}`;
+});
 ```
 
-
-
-### CHANGELOG
+## CHANGELOG
 
 **v1.0.0**
-- [ ] Add option: smartcrop disable
-- [ ] Implement: WebP ? avif ?
-- [ ] Samples with known CDN with image transformation ?
+- Automatic smartcrop can now be changed to fit
+- WebP, AVIF and auto mode (Thanks to [sharp](https://github.com/lovell/sharp))
 
 **v0.4.x**
 - Correction: URL is now "URI decoded"
