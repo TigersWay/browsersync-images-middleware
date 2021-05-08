@@ -10,7 +10,7 @@
     "image-processing",
     "cdn"
   ],
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "author": "Ben Michaud <ben@tigersway.net>",
   "repository": {
@@ -21,9 +21,11 @@
   "files": [
     "index.js"
   ],
-  "devDependencies": {
+  "dependencies": {
     "accepts": "^1.3.7",
-    "chalk": "^4.1.0",
-    "sharp": "^0.27.1"
+    "chalk": "^4.1.1"
+  },
+  "peerDependencies": {
+    "sharp": "^0.28.1"
   }
 }

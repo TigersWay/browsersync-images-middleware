@@ -6,7 +6,7 @@ browser-sync development middleware to resize and transform local images (fake-C
 ## Install  [![npm](https://img.shields.io/npm/v/browsersync-images-middleware?style=flat-square)](https://www.npmjs.com/package/browsersync-images-middleware)
 
 ```
-npm i -D browsersync-images-middleware
+npm i -D browsersync-images-middleware sharp
 ```
 
 ## Setup and features
@@ -64,6 +64,9 @@ eleventyConfig.addFilter('cdn', (imagePath, width, height, force) => {
 ```
 
 ## CHANGELOG
+
+**v2.0.0**
+- BREAKING: sharp is now a peerDependency, you must install it seperately
 
 **v1.0.0**
 - Automatic smartcrop can now be changed to fit

@@ -1,7 +1,8 @@
 {
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "browsersync-images-middleware": "link:.."
+    "browsersync-images-middleware": "latest",
+    "sharp": "latest"
   },
   "scripts": {
     "demo": "rm -rf public/* && npx eleventy --serve --config eleventy.config.js"
