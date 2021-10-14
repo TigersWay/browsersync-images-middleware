@@ -65,6 +65,9 @@ eleventyConfig.addFilter('cdn', (imagePath, width, height, force) => {
 
 ## CHANGELOG
 
+**v2.0.1**
+ - sharp peer dependency corrected
+
 **v2.0.0**
 - BREAKING: sharp is now a peerDependency, you must install it seperately
 
